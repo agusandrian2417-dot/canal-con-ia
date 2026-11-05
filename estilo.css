@@ -199,3 +199,5 @@ section[id] { scroll-margin-top: 90px; }
 .enlaces .pill.lleno .fin, .enlaces .pill.brasa .fin { color: rgba(0,0,0,.5); }
 
 @media (prefers-reduced-motion: reduce) { .cinta-pista, .punto.vivo { animation: none; } html { scroll-behavior: auto; } }
+
+.pill.apagado { pointer-events: none; opacity: .55; }

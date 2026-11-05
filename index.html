@@ -166,7 +166,7 @@
             <li><i></i><span>Actualizaciones</span><em>Gratis</em></li>
             <li><i></i><span>Acceso</span><em>Inmediato</em></li>
           </ul>
-          <a class="pill brasa grande" data-enlace="comprar" href="#">Comprar la guía</a>
+          <a class="pill brasa grande" data-enlace="comprar" data-pronto href="#precio">Comprar la guía</a>
           <div class="pagos" aria-label="Formas de pago">
             <span class="etiq">Tarjeta</span><span class="etiq">Mercado Pago</span><span class="etiq">Pix</span><span class="etiq">PayPal</span>
           </div>
@@ -186,9 +186,9 @@
         <p class="cuerpo">Armé <b data-canal>mi canal</b> desde Argentina con un celular, una PC común y herramientas de IA. Sin cámara, sin estudio y sin saber editar al principio. Hoy tiene miles de suscriptores, videos de más de un millón de vistas y una página de Facebook monetizada.</p>
         <p class="cuerpo">Todo lo que probé, lo que funcionó y lo que fue una pérdida de tiempo está en esta guía. <b>No vendo un resultado: vendo el método</b>, con mis números reales como prueba de que funciona cuando se aplica.</p>
         <div class="hero-acciones">
-          <a class="pill" data-enlace="youtube" href="#" target="_blank" rel="noopener"><span class="mas" aria-hidden="true">+</span>Ver el canal en YouTube</a>
-          <a class="pill" data-enlace="tiktok" href="#" target="_blank" rel="noopener"><span class="mas" aria-hidden="true">+</span>TikTok</a>
-          <a class="pill" data-enlace="instagram" href="#" target="_blank" rel="noopener"><span class="mas" aria-hidden="true">+</span>Instagram</a>
+          <a class="pill" data-enlace="youtube" href="#"><span class="mas" aria-hidden="true">+</span>Ver el canal en YouTube</a>
+          <a class="pill" data-enlace="tiktok" href="#"><span class="mas" aria-hidden="true">+</span>TikTok</a>
+          <a class="pill" data-enlace="instagram" href="#"><span class="mas" aria-hidden="true">+</span>Instagram</a>
         </div>
       </div>
     </div>
@@ -234,10 +234,10 @@
         <p class="cuerpo" style="font-size:15px">Guía digital vendida y entregada por Hotmart. Los resultados mencionados son los de mi propio canal; los tuyos dependen de tu trabajo y de cada plataforma.</p>
       </div>
       <nav class="pie-links" aria-label="Redes">
-        <a class="pill chica" data-enlace="youtube" href="#" target="_blank" rel="noopener">YouTube</a>
-        <a class="pill chica" data-enlace="tiktok" href="#" target="_blank" rel="noopener">TikTok</a>
-        <a class="pill chica" data-enlace="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
-        <a class="pill chica" data-enlace="facebook" href="#" target="_blank" rel="noopener">Facebook</a>
+        <a class="pill chica" data-enlace="youtube" href="#">YouTube</a>
+        <a class="pill chica" data-enlace="tiktok" href="#">TikTok</a>
+        <a class="pill chica" data-enlace="instagram" href="#">Instagram</a>
+        <a class="pill chica" data-enlace="facebook" href="#">Facebook</a>
       </nav>
     </div>
   </div>
@@ -255,6 +255,7 @@
   document.querySelectorAll('[data-enlace]').forEach(function (a) {
     var k = a.getAttribute('data-enlace'), u = c[k];
     if (u && u.indexOf('XXXX') === -1 && u.indexOf('tucanal') === -1) a.href = u;
+    else if (k === 'comprar' && a.hasAttribute('data-pronto')) { a.textContent = 'Disponible muy pronto'; a.classList.add('apagado'); }
   });
   // Nombre del canal
   if (c.canal && c.canal !== '{CANAL}') document.querySelectorAll('[data-canal]').forEach(function (e) { e.textContent = c.canal; });
