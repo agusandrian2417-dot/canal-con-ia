@@ -25,6 +25,55 @@
     <a class="pill" data-enlace="instagram" href="#"><span class="mas" aria-hidden="true">+</span>Instagram<span class="fin">Reels</span></a>
     <a class="pill" data-enlace="facebook" href="#"><span class="mas" aria-hidden="true">+</span>Facebook<span class="fin">Página</span></a>
   </nav>
+
+  <section class="otros" aria-labelledby="otros-titulo">
+    <p class="ojo"><i class="punto"></i>También hago</p>
+    <h2 id="otros-titulo" class="monumento">Otros canales</h2>
+
+    <article class="canal">
+      <div class="canal-cab">
+        <img src="img/ficha.png" alt="Logo de Ficha Urbana" width="64" height="64">
+        <div>
+          <h3>Ficha Urbana</h3>
+          <p>Las peleas, discos y récords del género urbano, explicados en un minuto.</p>
+        </div>
+      </div>
+      <p class="pedido">¿Qué pelea quieres ver explicada? Las más pedidas son los próximos videos.</p>
+      <nav class="lista" aria-label="Ficha Urbana">
+        <a class="pill brasa" data-enlace="fichaDestacado" data-ocultar href="#"><span class="mas" aria-hidden="true">+</span>Pedido destacado: tu tema sale primero<span class="fin">Apoyar</span></a>
+        <a class="pill lleno" data-enlace="fichaGrupo" data-ocultar href="#"><span class="mas" aria-hidden="true">+</span>Únete al grupo de pedidos<span class="fin">Gratis</span></a>
+        <a class="pill" href="https://ig.me/m/fichaurbana"><span class="mas" aria-hidden="true">+</span>Mandar tu idea por mensaje<span class="fin">Instagram</span></a>
+      </nav>
+      <div class="redes">
+        <a href="https://www.instagram.com/fichaurbana/">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61596351507342">Facebook</a>
+        <a href="https://www.youtube.com/@fichaurbana">YouTube</a>
+        <a href="https://www.tiktok.com/@fichaurbana">TikTok</a>
+      </div>
+    </article>
+
+    <article class="canal">
+      <div class="canal-cab">
+        <img src="img/crimencraft.png" alt="Logo de CrimenCraft" width="64" height="64">
+        <div>
+          <h3>CrimenCraft</h3>
+          <p>Casos reales, fugas y estafas contados como si fueran un servidor de Minecraft.</p>
+        </div>
+      </div>
+      <p class="pedido">¿Qué caso quieres ver recreado en Minecraft?</p>
+      <nav class="lista" aria-label="CrimenCraft">
+        <a class="pill brasa" data-enlace="crimenDestacado" data-ocultar href="#"><span class="mas" aria-hidden="true">+</span>Pedido destacado: tu caso sale primero<span class="fin">Apoyar</span></a>
+        <a class="pill lleno" data-enlace="crimenGrupo" data-ocultar href="#"><span class="mas" aria-hidden="true">+</span>Únete al grupo de pedidos<span class="fin">Gratis</span></a>
+        <a class="pill" href="https://ig.me/m/crimencraft"><span class="mas" aria-hidden="true">+</span>Mandar tu caso por mensaje<span class="fin">Instagram</span></a>
+      </nav>
+      <div class="redes">
+        <a href="https://www.youtube.com/@crimencraft">YouTube</a>
+        <a href="https://www.tiktok.com/@crimencraft">TikTok</a>
+        <a href="https://www.instagram.com/crimencraft/">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61596142275341">Facebook</a>
+      </div>
+    </article>
+  </section>
 </main>
 <script>
 (function () {
@@ -32,6 +81,7 @@
   document.querySelectorAll('[data-enlace]').forEach(function (a) {
     var k = a.getAttribute('data-enlace'), u = c[k];
     if (u && u.indexOf('XXXX') === -1 && u.indexOf('tucanal') === -1) a.href = u;
+    else if (a.hasAttribute('data-ocultar')) a.style.display = 'none';
     else if (k === 'comprar') { var f = a.querySelector('.fin'); if (f) f.textContent = 'Pronto'; }
   });
   if (c.canal && c.canal !== '{CANAL}') document.querySelectorAll('[data-canal]').forEach(function (e) { e.textContent = c.canal; });

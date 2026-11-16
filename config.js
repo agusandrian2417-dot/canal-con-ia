@@ -7,6 +7,11 @@ window.CONFIG = {
   tiktok: "https://www.tiktok.com/@viajerodorado",
   instagram: "https://www.instagram.com/viajerodorado",
   facebook: "https://www.facebook.com/viajerodorado",
-  precio: "15",                            // precio actual en USD
+  // Otros canales: mientras un enlace esté vacío, su botón no se muestra.
+  fichaGrupo: "",        // enlace del grupo o canal de WhatsApp/Telegram para pedidos de Ficha Urbana
+  fichaDestacado: "",    // enlace de pago (Mercado Pago, PayPal o Ko-fi) para un pedido destacado
+  crimenGrupo: "",       // lo mismo para CrimenCraft
+  crimenDestacado: "",
+  precio: "15",                           // precio actual en USD
   precioAntes: "25",                       // precio tachado (dejá "" para no mostrarlo)
 };

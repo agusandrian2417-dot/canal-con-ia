@@ -201,3 +201,17 @@ section[id] { scroll-margin-top: 90px; }
 @media (prefers-reduced-motion: reduce) { .cinta-pista, .punto.vivo { animation: none; } html { scroll-behavior: auto; } }
 
 .pill.apagado { pointer-events: none; opacity: .55; }
+
+/* Otros canales (en la página de enlaces) */
+.otros { width: 100%; display: grid; gap: 18px; margin-top: 40px; padding-top: 36px; border-top: 1px solid var(--grafito); justify-items: center; }
+.otros h2 { font-size: clamp(40px, 11vw, 64px); color: var(--blanco); }
+.canal { width: 100%; display: grid; gap: 14px; padding: 20px 16px; border: 1px solid var(--grafito); border-radius: 18px; background: var(--onix); text-align: left; }
+.canal-cab { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; align-items: center; }
+.canal-cab img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background: var(--negro); }
+.canal h3 { font-family: var(--fd); font-weight: 700; font-size: 30px; line-height: 1; text-transform: uppercase; color: var(--blanco); }
+.canal-cab p { margin-top: 4px; font-size: 15px; color: var(--ceniza); }
+.canal .pedido { font-size: 15px; color: var(--hueso); }
+.canal .lista { margin-top: 0; }
+.redes { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.redes a { font-family: var(--fm); font-size: 12px; text-transform: uppercase; letter-spacing: .02em; color: var(--ceniza); text-decoration: underline; text-underline-offset: 3px; }
+.redes a:hover { color: var(--blanco); }
